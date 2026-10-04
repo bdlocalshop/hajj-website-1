@@ -1,0 +1,242 @@
+/* ==========================================================================
+   Al-Safwa Hajj & Umrah Journeys - Responsive Stylesheet
+   Breakpoints for Mobile, Tablet, and Desktop Devices
+   ========================================================================== */
+
+/* Tablet and Smaller (< 1024px) */
+@media (max-width: 1024px) {
+  .hero-search-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-search-form .search-field:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .hero-search-form button {
+    grid-column: span 2;
+    height: 48px;
+  }
+
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .calc-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-summary-pane {
+    border-left: none;
+    border-top: 3px solid var(--accent-gold);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .rituals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .inquiry-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet Portrait & Mobile Navigation (< 860px) */
+@media (max-width: 860px) {
+  .top-bar-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    text-align: center;
+  }
+
+  .top-contacts {
+    gap: 0.85rem;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .menu-toggle-btn {
+    display: flex;
+  }
+
+  /* Mobile Navigation Drawer */
+  .mobile-navigation {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 300px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto;
+  }
+
+  .mobile-navigation.is-active {
+    right: 0;
+  }
+
+  .mobile-nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .mobile-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .mobile-nav-links a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-emerald);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-nav-links a:hover {
+    color: var(--accent-gold);
+  }
+
+  .mobile-nav-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .trust-stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-inclusions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Devices (< 640px) */
+@media (max-width: 640px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .hero-section {
+    padding: 4.5rem 0 3rem;
+  }
+
+  .hero-search-box {
+    padding: 1.25rem;
+  }
+
+  .hero-search-form {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-search-form .search-field:nth-child(4),
+  .hero-search-form button {
+    grid-column: span 1;
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-form-pane, .calc-summary-pane {
+    padding: 1.5rem;
+  }
+
+  .calc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-field-group.full-width {
+    grid-column: span 1;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rituals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field.full {
+    grid-column: span 1;
+  }
+
+  .inquiry-info-pane, .inquiry-form-pane {
+    padding: 1.75rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .modal-content-inner {
+    padding: 1.5rem;
+  }
+
+  .modal-hotels-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-tabs {
+    border-radius: var(--radius-md);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .floating-actions {
+    bottom: 16px;
+    left: 16px;
+  }
+}
